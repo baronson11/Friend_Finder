@@ -22,14 +22,22 @@ function compareFriends(matchFriend) {
     currentFriend.totalDifference = totalDifference;
   }
 
+// goes back through each friend, assigns totalDiff, shows results in node
+let results = [];
+
   friends.forEach((friend) => {
-      let results = [];
-      results.push(friend.totalDifference);
-      results.sort((a, b) => {return a-b});
-      console.log(friend);
-      console.log(results);
-      return friend;
+    if (friend.totalDifference > 0) {
+      results.push(
+        {
+          friend_name: friend.name,
+          total_Difference: friend.totalDifference,
+        }
+      );
+      console.log(`${friend.name} | ${friend.totalDifference}`);
+    }
   });
+
+  return results;
 }
 
 module.exports = compareFriends;

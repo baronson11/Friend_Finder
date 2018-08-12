@@ -35,10 +35,9 @@ app.get("/api/friends", (req, res) => {
 
 app.post("/api/friends", (req, res) => {
   let newfriend = req.body;
-  console.log(newfriend);
   friends.push(newfriend);
   let match = compareFriends(newfriend);
-  console.log(match);
+  console.log(`You are matched with ${match[0].friend_name}`);
   res.json(newfriend);
 });
 
