@@ -206,7 +206,7 @@
           match.sort(function(a, b){return a-b});
           for (y = 0; y < data.length; y++) {
             if (match[0] === data[y].total_Difference) {
-              alert(data[y].friend_name);
+              alert(`You matched with ${data[y].friend_name}!`);
             }
           }
           form.reset();
