@@ -4,31 +4,31 @@ let friends = [
     photo: "https://google.com",
     scores: [
       5,
-      1,
       3,
-      6,
-      8,
-      1,
-      8,
       3,
       2,
-      9
+      4,
+      5,
+      4,
+      5,
+      4,
+      5
     ]
   },
   {
     name: "Salazar Slitheren",
     photo: "https://google.com",
     scores: [
-      6,
-      7,
-      8,
       1,
       2,
-      9,
-      7,
-      8,
-      9,
-      4
+      3,
+      2,
+      2,
+      1,
+      3,
+      5,
+      1,
+      2
     ]
   },
   {
