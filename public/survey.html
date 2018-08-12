@@ -199,10 +199,19 @@
       $.post("/api/friends", newfriend)
         .then(function(data) {
           console.log("survey.html", data);
+          let match = [];
+          for (i = 0; i < data.length; i++) {
+            match.push(data[i].total_Difference);
+          }
+          match.sort(function(a, b){return a-b});
+          for (y = 0; y < data.length; y++) {
+            if (match[0] === data[y].total_Difference) {
+              alert(data[y].friend_name);
+            }
+          }
           form.reset();
         });
     });
-
     </script>
   </body>
 </html>

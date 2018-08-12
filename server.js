@@ -37,8 +37,7 @@ app.post("/api/friends", (req, res) => {
   let newfriend = req.body;
   friends.push(newfriend);
   let match = compareFriends(newfriend);
-  console.log(`You are matched with ${match[0].friend_name}`);
-  res.json(newfriend);
+  res.json(match);
 });
 
 // Starts the server -----------------------------------------

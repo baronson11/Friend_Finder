@@ -31,6 +31,22 @@ let friends = [
       4
     ]
   },
+  {
+    name: "Harry Potter",
+    photo: "https://google.com",
+    scores: [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
 ]
 
 module.exports = friends;
