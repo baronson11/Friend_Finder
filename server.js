@@ -5,6 +5,7 @@ const path = require("path");
 const htmlRoutes = require("./routing/htmlRoutes.js");
 const apiRoutes = require("./routing/apiRoutes.js");
 const friends = require("./app/data/friends.js");
+const compareFriends = require("./app/data/compare.js");
 
 // app and port------------------------------------
 const app = express();
@@ -36,6 +37,8 @@ app.post("/api/friends", (req, res) => {
   let newfriend = req.body;
   console.log(newfriend);
   friends.push(newfriend);
+  let match = compareFriends(newfriend);
+  console.log(match);
   res.json(newfriend);
 });
 
