@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 8080;
 // Body Parser ---------------------------------------
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use('/static', express.static('assets'));
 
 // Routing ------------------------------------------------
 
